@@ -293,14 +293,6 @@ module circuit(
     assign LED0 = BTN0 ? diff[0] : sum[0];
     assign LED1 = BTN0 ? diff[1] : sum[1];
     assign LED2 = BTN0 ? diff[2] : carry[1];
-    assign LED3 = BTN0 ? diff[3] : 1'b0;
-
-endmodule
-    );
-    
-    assign LED0 = BTN0 ? diff[0] : sum[0];
-    assign LED1 = BTN0 ? diff[1] : sum[1];
-    assign LED2 = BTN0 ? diff[2] : carry[1];
-    assign LED3 = BTN0 ? diff[3] : 1'b0;
+    assign LED3 = BTN0 ? sum2[3] : 1'b0;
 
 endmodule
