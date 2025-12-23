@@ -56,6 +56,17 @@ module btoc( //Binary to 2's Complement (4Bit) (Also works in reverse as ctob)
 
 endmodule
 
+module grayconversion(
+    input [3:0] raw,
+    output [3:0] gray
+);
+    assign gray[3] = raw[3];
+    assign gray[2] = raw[3] ^ raw[2];
+    assign gray[1] = raw[2] ^ raw[1];
+    assign gray[0] = raw[1] ^ raw[0];
+
+endmodule
+
 module circuit(
     input SWa1, SWa0, SWb1, SWb0, BTN0,
     output LED0, LED1, LED2, LED3
