@@ -19,7 +19,7 @@ module btoc( //Binary to 2's Complement (4Bit) (Also works in reverse as ctob)
         .SWB(1'b1),
         .carryin(1'b0),
         .sum(sum0),
-        .carry(carry0)
+        .carryout(carry0)
     );
     
     assign SW2A = sum0;
@@ -29,7 +29,7 @@ module btoc( //Binary to 2's Complement (4Bit) (Also works in reverse as ctob)
         .SWB(1'b0),
         .carryin(carry0),
         .sum(sum1),
-        .carry(carry1)
+        .carryout(carry1)
     );
     
     assign SW2B = sum1;
@@ -39,7 +39,7 @@ module btoc( //Binary to 2's Complement (4Bit) (Also works in reverse as ctob)
         .SWB(1'b0),
         .carryin(carry1),
         .sum(sum2),
-        .carry(carry2)
+        .carryout(carry2)
     );
     
     assign SW2C = sum2;
@@ -49,7 +49,7 @@ module btoc( //Binary to 2's Complement (4Bit) (Also works in reverse as ctob)
         .SWB(1'b0),
         .carryin(carry2),
         .sum(sum3),
-        .carry(carry3)
+        .carryout(carry3)
     );
     
     assign SW2D = sum3;
